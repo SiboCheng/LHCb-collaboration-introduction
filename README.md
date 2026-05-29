@@ -44,7 +44,7 @@ tags: "关键词1, 关键词2, 关键词3"
 ## 发布到 GitHub Pages
 
 1. 在 GitHub 新建公开仓库。
-2. 上传 `index.html`、`styles.css` 和 `README.md`。
+2. 上传 `index.html`、`styles.css`、`app.js`、`README.md` 和 `content/research.md`。
 3. 进入仓库的 `Settings` -> `Pages`。
 4. Source 选择 `Deploy from a branch`。
 5. Branch 选择 `main`，目录选择 `/ (root)`。

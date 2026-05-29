@@ -198,21 +198,6 @@ h3 {
   font-size: 18px;
 }
 
-.student-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.student-grid article {
-  min-height: 190px;
-  padding: 24px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--surface);
-}
-
-.student-grid p,
 .research-summary,
 .research-detail,
 .contact p {
@@ -344,7 +329,6 @@ h3 {
     padding-block: 56px;
   }
 
-  .student-grid,
   .research-card,
   .contact {
     grid-template-columns: 1fr;
