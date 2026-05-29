@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>LHCb 合作组介绍 | 夏令营</title>
+    <title>LHCb 合作组研究方向 | 夏令营</title>
     <meta
       name="description"
-      content="面向夏令营报名学生的 LHCb 合作组简要介绍，包括研究方向、学生参与方式和联系方式。"
+      content="面向夏令营报名学生的 LHCb 合作组研究方向介绍，包括核心课题、学生参与方式和联系方式。"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -14,9 +14,9 @@
     <header class="site-header">
       <a class="brand" href="#top" aria-label="返回首页">LHCb 合作组</a>
       <nav class="nav" aria-label="页面导航">
-        <a href="#about">关于</a>
-        <a href="#research">方向</a>
-        <a href="#students">学生</a>
+        <a href="#research">研究方向</a>
+        <a href="#students">学生参与</a>
+        <a href="#about">合作组</a>
         <a href="#contact">联系</a>
       </nav>
     </header>
@@ -25,14 +25,14 @@
       <section class="hero">
         <div class="hero-copy">
           <p class="eyebrow">面向夏令营报名学生</p>
-          <h1>在 LHCb 中探索重味物理与粒子世界</h1>
+          <h1>LHCb 合作组研究方向</h1>
           <p class="lead">
-            我们关注高能实验物理中的味物理、CP 破坏、稀有衰变与数据分析。
-            这个页面帮助你快速了解合作组在做什么，以及本科生可以如何参与。
+            这个页面面向准备夏令营报名的同学，重点展示合作组当前关注的研究问题、
+            使用的方法和学生可以参与的具体入口。
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#research">了解研究方向</a>
-            <a class="button secondary" href="#students">学生如何参与</a>
+            <a class="button primary" href="#research">查看研究方向</a>
+            <a class="button secondary" href="#students">了解学生参与</a>
           </div>
         </div>
         <div class="hero-panel" aria-label="合作组关键词">
@@ -44,83 +44,55 @@
         </div>
       </section>
 
-      <section id="about" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">About</p>
-          <h2>我们是谁</h2>
-        </div>
-        <div class="text-block">
-          <p>
-            LHCb 是大型强子对撞机上的重要实验之一，主要研究含有 beauty 和 charm
-            夸克的强子，用精密测量寻找标准模型之外的新物理迹象。
-          </p>
-          <p>
-            本合作组参与 LHCb 相关的物理分析、软件与数据处理工作。我们欢迎对粒子物理、
-            编程、统计分析和科研训练感兴趣的同学进一步交流。
-          </p>
-        </div>
-      </section>
-
       <section id="research" class="section muted">
         <div class="section-heading">
           <p class="eyebrow">Research</p>
           <h2>研究方向</h2>
+          <p>
+            下方内容来自 `content/research/` 中的 Markdown 文件。老师修改对应 `.md`
+            文档后，网页会自动显示更新后的标题、摘要、关键词和详细说明。
+          </p>
         </div>
-        <div class="feature-grid">
-          <article class="feature">
-            <h3>重味物理分析</h3>
-            <p>研究含 beauty 或 charm 夸克粒子的产生、衰变和性质，理解微观世界的基本规律。</p>
-          </article>
-          <article class="feature">
-            <h3>CP 破坏与稀有过程</h3>
-            <p>通过精密测量寻找微小偏差，为理解物质和反物质的不对称提供线索。</p>
-          </article>
-          <article class="feature">
-            <h3>数据处理与计算</h3>
-            <p>使用 Python、ROOT、统计方法和实验软件处理大规模实验数据。</p>
-          </article>
+        <div id="research-list" class="research-list" aria-live="polite">
+          <p class="loading">正在加载研究方向...</p>
         </div>
       </section>
 
       <section id="students" class="section">
         <div class="section-heading">
           <p class="eyebrow">For Students</p>
-          <h2>本科生可以做什么</h2>
+          <h2>学生如何参与研究</h2>
         </div>
-        <div class="timeline">
-          <div class="step">
-            <strong>入门阶段</strong>
-            <p>学习粒子物理基础、Python、Linux、Git 和基本数据分析工具。</p>
-          </div>
-          <div class="step">
-            <strong>训练阶段</strong>
-            <p>阅读公开资料，复现实验分析中的基础图表，熟悉 LHCb 的研究问题。</p>
-          </div>
-          <div class="step">
-            <strong>参与阶段</strong>
-            <p>在老师和高年级同学指导下，参与暑研、大创、毕业论文或组内项目。</p>
-          </div>
+        <div class="student-grid">
+          <article>
+            <h3>基础准备</h3>
+            <p>粒子物理基础、Python、Linux、Git、数据分析和统计方法。</p>
+          </article>
+          <article>
+            <h3>项目训练</h3>
+            <p>从公开资料、示例数据、基础图表复现和小型分析任务开始。</p>
+          </article>
+          <article>
+            <h3>科研参与</h3>
+            <p>在老师和高年级同学指导下参与暑研、大创、毕业论文或组内项目。</p>
+          </article>
         </div>
       </section>
 
-      <section class="section muted">
+      <section id="about" class="section muted">
         <div class="section-heading">
-          <p class="eyebrow">FAQ</p>
-          <h2>夏令营同学常见问题</h2>
+          <p class="eyebrow">About</p>
+          <h2>合作组简介</h2>
         </div>
-        <div class="qa-list">
-          <details>
-            <summary>没有高能物理背景可以了解吗？</summary>
-            <p>可以。夏令营阶段更看重兴趣、基础学习能力和持续投入的意愿。</p>
-          </details>
-          <details>
-            <summary>需要很强的编程能力吗？</summary>
-            <p>编程会很有帮助，但可以逐步学习。Python、Linux 和数据分析是最常用的起点。</p>
-          </details>
-          <details>
-            <summary>本科生能参与真实科研吗？</summary>
-            <p>可以。通常会从阅读、工具训练和小型分析任务开始，逐步接触更完整的研究问题。</p>
-          </details>
+        <div class="text-block">
+          <p>
+            LHCb 是大型强子对撞机上的重要实验之一，主要研究含有 beauty 和 charm
+            夸克的强子。本合作组参与 LHCb 相关物理分析、软件与数据处理工作。
+          </p>
+          <p>
+            本页面不是 LHCb 官方网站，用于夏令营交流和合作组公开介绍。具体研究题目、
+            招生安排和项目细节以老师最新说明为准。
+          </p>
         </div>
       </section>
 
@@ -140,5 +112,6 @@
     <footer class="site-footer">
       <p>© 2026 LHCb 合作组介绍页。本页面用于夏令营交流与公开介绍。最后更新：2026-05-29。</p>
     </footer>
+    <script src="app.js"></script>
   </body>
 </html>

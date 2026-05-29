@@ -1,10 +1,47 @@
 # LHCb 合作组介绍网页
 
-这是一个面向夏令营报名学生的最小静态网站版本。
+这是一个面向夏令营报名学生的 LHCb 合作组研究方向介绍页。
 
 ## 本地预览
 
-直接用浏览器打开 `index.html` 即可。
+网页会读取 `content/research/` 下的 Markdown 文件。由于浏览器直接打开本地
+`index.html` 时可能限制读取文件，建议用本地静态服务预览：
+
+```bash
+python -m http.server 8787
+```
+
+然后访问：
+
+```text
+http://127.0.0.1:8787/
+```
+
+## 编辑研究方向
+
+老师只需要修改这些 Markdown 文件：
+
+```text
+content/research/heavy-flavour.md
+content/research/cp-violation.md
+content/research/data-analysis.md
+```
+
+每个文件顶部的字段会显示在研究方向卡片中：
+
+```md
+---
+title: "研究方向标题"
+label: "方向类别"
+summary: "一句话摘要"
+tags: "关键词1, 关键词2, 关键词3"
+---
+```
+
+分隔线下方的正文会显示为研究方向详情。当前支持段落、二级标题和列表。
+
+如果以后要新增研究方向，需要新增一个 Markdown 文件，并在 `app.js` 顶部的
+`researchFiles` 列表中加入文件路径。
 
 ## 发布到 GitHub Pages
 
