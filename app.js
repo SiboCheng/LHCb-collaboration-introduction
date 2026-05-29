@@ -1,9 +1,3 @@
-const researchFiles = [
-  "content/research/heavy-flavour.md",
-  "content/research/cp-violation.md",
-  "content/research/data-analysis.md",
-];
-
 const list = document.querySelector("#research-list");
 
 function parseFrontMatter(markdown) {
@@ -22,6 +16,14 @@ function parseFrontMatter(markdown) {
   }
 
   return { data, body: match[2].trim() };
+}
+
+function parseResearchDocument(markdown) {
+  return markdown
+    .split(/\n---direction---\n/g)
+    .map((block) => block.trim())
+    .filter(Boolean)
+    .map(parseFrontMatter);
 }
 
 function inlineMarkdown(text) {
@@ -98,19 +100,15 @@ function renderResearch(items) {
 
 async function loadResearch() {
   try {
-    const items = await Promise.all(
-      researchFiles.map(async (file) => {
-        const response = await fetch(file);
-        if (!response.ok) {
-          throw new Error(`Cannot load ${file}`);
-        }
-        return parseFrontMatter(await response.text());
-      }),
-    );
+    const response = await fetch("content/research.md");
+    if (!response.ok) {
+      throw new Error("Cannot load content/research.md");
+    }
+    const items = parseResearchDocument(await response.text());
     renderResearch(items);
   } catch (error) {
     list.innerHTML =
-      '<p class="loading error">研究方向内容加载失败。请检查 content/research/ 下的 Markdown 文件是否存在。</p>';
+      '<p class="loading error">研究方向内容加载失败。请检查 content/research.md 是否存在。</p>';
   }
 }
 
