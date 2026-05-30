@@ -92,6 +92,12 @@ function renderResearch(items) {
             <div class="tag-list">${tagList(data.tags)}</div>
           </div>
           <div class="research-detail">${markdownToHtml(body)}</div>
+          ${data.detail ? `
+            <details class="research-extra">
+              <summary>详细介绍</summary>
+              <p>${inlineMarkdown(data.detail)}</p>
+            </details>
+          ` : ""}
         </article>
       `,
     )

@@ -276,6 +276,47 @@ h3 {
   margin-top: 6px;
 }
 
+.research-extra {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+
+.research-extra summary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 8px 14px;
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+  color: var(--primary);
+  cursor: pointer;
+  font-weight: 800;
+  list-style: none;
+}
+
+.research-extra summary::-webkit-details-marker {
+  display: none;
+}
+
+.research-extra summary:hover {
+  background: var(--soft);
+}
+
+.research-extra[open] summary {
+  margin-bottom: 16px;
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.research-extra p {
+  max-width: 980px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+}
+
 .loading {
   margin: 0;
   padding: 22px;
