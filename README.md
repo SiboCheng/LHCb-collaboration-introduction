@@ -5,17 +5,12 @@
 
 ## 本地预览
 
-网页会读取 `content/research.md`。由于浏览器直接打开本地
-`index.html` 时可能限制读取文件，建议用本地静态服务预览：
+网页会读取 `content/research.md` 作为研究方向相关内容。
 
-```bash
-python -m http.server 8787
-```
-
-然后访问：
+网页访问：
 
 ```text
-http://127.0.0.1:8787/
+https://sibocheng.github.io/LHCb-collaboration-introduction/
 ```
 
 ## 编辑研究方向
@@ -52,19 +47,8 @@ detail: "点击详细介绍后显示的一整段专业化描述"
 如果以后要新增研究方向，在 `content/research.md` 中复制一个完整区块，并用
 `---direction---` 分隔即可，不需要修改网页代码。
 
-## 发布到 GitHub Pages
-
-1. 在 GitHub 新建公开仓库。
-2. 上传 `index.html`、`styles.css`、`app.js`、`README.md` 和 `content/research.md`。
-3. 进入仓库的 `Settings` -> `Pages`。
-4. Source 选择 `Deploy from a branch`。
-5. Branch 选择 `main`，目录选择 `/ (root)`。
-6. 保存后等待 GitHub 生成公开访问链接。
-
 ## 后续可优化内容
 
-- 替换联系邮箱和合作组正式名称。
-- 添加老师和学生成员列表。
+- 替换联系邮箱。
 - 添加真实照片或公开授权的实验图片。
-- 增加中英文切换。
-- 增加新闻动态页面。
+- ...
