@@ -5,7 +5,7 @@
 
 ## 本地预览
 
-网页会读取 `content/research.md` 作为研究方向相关内容。
+网页读取 `content/research.md` 作为研究方向相关内容。
 
 网页访问：
 
